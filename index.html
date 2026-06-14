@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobana — AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <span class="loader-s">Sobana</span>
+      </div>
+      <p class="loader-sub">AI Engineer</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Particles Canvas -->
+  <canvas id="particles" class="particles-canvas"></canvas>
+
+  <!-- Nav -->
+  <header class="nav-wrap" id="nav">
+    <nav class="nav container">
+      <a href="#home" class="nav-logo">Sobana</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="menu"><i class="fa fa-bars"></i></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose"><i class="fa fa-times"></i></button>
+    <ul>
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="container hero-inner">
+
+      <div class="hero-photo-wrap">
+        <div class="hero-photo">
+          <img src="files/me.jpg" alt="Sobana R.S">
+        </div>
+        <div class="photo-badge"><i class="fa fa-brain"></i> AI Engineer</div>
+        <div class="photo-glow"></div>
+      </div>
+
+      <div class="hero-text">
+        <div class="hero-greeting">
+          <span class="greeting-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-name">
+          <span class="name-first">Sobana</span>
+          <span class="name-last">R.S</span>
+        </h1>
+        <div class="hero-role-wrap">
+          <span class="hero-role-static">I build&nbsp;</span>
+          <span class="hero-role-typed" id="typedRole"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-bio">
+          B.Tech AI &amp; Data Science graduate (CGPA 8.99) building intelligent systems with LLMs, LangChain, RAG, and deep learning. Associate Software Engineer at Greywiz — turning complex data into real-world impact.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-pill"><span class="stat-num">8.99</span><span class="stat-label">CGPA</span></div>
+          <div class="stat-pill"><span class="stat-num">3</span><span class="stat-label">Publications</span></div>
+          <div class="stat-pill"><span class="stat-num">15+</span><span class="stat-label">Projects</span></div>
+          <div class="stat-pill"><span class="stat-num">2</span><span class="stat-label">Awards</span></div>
+        </div>
+        <div class="hero-actions">
+          <a href="files/sobana resume.pdf" class="btn btn-primary" download>
+            <i class="fa fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+        <div class="hero-social">
+          <a href="mailto:sobanaramakrishnan04@gmail.com" aria-label="Email" class="social-link">
+            <i class="fa fa-envelope"></i><span>Email</span>
+          </a>
+          <a href="https://github.com/sobanaramakrishnan" target="_blank" aria-label="GitHub" class="social-link">
+            <i class="fa-brands fa-github"></i><span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sobana-r-s-66b726237/" target="_blank" aria-label="LinkedIn" class="social-link">
+            <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
+          </a>
+          <a href="https://www.hackerrank.com/profile/sobanaramakrish1" target="_blank" aria-label="HackerRank" class="social-link">
+            <i class="fa fa-code"></i><span>HackerRank</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"><i class="fa fa-chevron-down"></i></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">Who I Am</h2>
+          <p>I'm a B.Tech graduate in Artificial Intelligence &amp; Data Science from Sethu Institute of Technology with a CGPA of 8.99. Currently working as an Associate Software Engineer at Greywiz Private Limited, building RAG-based AI chatbots with LangChain and LangGraph.</p>
+          <p>I have a deep interest in Generative AI and applied machine learning — from building recruitment pipelines to deploying computer vision systems in manufacturing. I thrive at the intersection of research and real-world deployment.</p>
+          <div class="about-highlights">
+            <div class="highlight-chip chip-gold"><i class="fa fa-robot"></i> Generative AI</div>
+            <div class="highlight-chip chip-purple"><i class="fa fa-brain"></i> Deep Learning</div>
+            <div class="highlight-chip chip-blue"><i class="fa fa-eye"></i> Computer Vision</div>
+            <div class="highlight-chip chip-green"><i class="fa fa-comments"></i> NLP</div>
+          </div>
+        </div>
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="detail-label"><i class="fa fa-map-marker-alt"></i> Location</span>
+            <span class="detail-value">Madurai, Tamil Nadu, India</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label"><i class="fa fa-envelope"></i> Email</span>
+            <span class="detail-value">sobanaramakrishnan04@gmail.com</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label"><i class="fa fa-briefcase"></i> Availability</span>
+            <span class="detail-value available-badge">🟢 Open to Work</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label"><i class="fa fa-clock"></i> Experience</span>
+            <span class="detail-value">1+ Year</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label"><i class="fa fa-graduation-cap"></i> CGPA</span>
+            <span class="detail-value gold-text">8.99 / 10</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label"><i class="fa fa-file-alt"></i> Publications</span>
+            <span class="detail-value">3 Peer-Reviewed Papers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-label">Background</div>
+      <div class="timeline-grid">
+
+        <!-- Work -->
+        <div>
+          <h2 class="section-title">Work Experience</h2>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot tl-dot-active"></div>
+              <div class="tl-content">
+                <div class="tl-meta">May 2025 — Present <span class="tl-badge-live">● Live</span></div>
+                <h3 class="tl-role">Associate Software Engineer</h3>
+                <span class="tl-company">Greywiz Private Limited</span>
+                <p class="tl-desc">Building an end-to-end RAG chatbot to answer queries from internal documents and external knowledge sources. Implemented LangChain pipelines for document ingestion and intelligent retrieval, LangGraph for multi-step conversational workflows, and PostgreSQL for scalable data storage.</p>
+                <div class="tl-tags">
+                  <span>Python</span><span>LangChain</span><span>LangGraph</span><span>RAG</span><span>PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title" style="margin-top:3rem;">Internships</h2>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-meta">Dec 2024 — Feb 2025</div>
+                <h3 class="tl-role">AI/ML Intern</h3>
+                <span class="tl-company">Infosys Springboard Internship 5.0</span>
+                <p class="tl-desc">Developed an AI-powered tool that generates role-specific interview questions for recruiters and hiring managers using Generative AI.</p>
+                <div class="tl-tags"><span>GenAI</span><span>NLP</span><span>Machine Learning</span></div>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-meta">Nov 2023 — Dec 2023</div>
+                <h3 class="tl-role">Gen AI Intern</h3>
+                <span class="tl-company">Agiliz Tech, Bangalore</span>
+                <p class="tl-desc">Trained on Generative AI and prompt engineering methodologies and built a functional chatbot for a medical website.</p>
+                <div class="tl-tags"><span>Prompt Engineering</span><span>Chatbot</span><span>GenAI</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="section-title">Education</h2>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot tl-dot-edu"></div>
+              <div class="tl-content">
+                <div class="tl-meta">2021 — 2025</div>
+                <h3 class="tl-role">B.Tech — AI &amp; Data Science</h3>
+                <span class="tl-company">Sethu Institute of Technology, Virudhunagar</span>
+                <p class="tl-desc">CGPA: <strong style="color:var(--gold)">8.99 / 10</strong></p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot tl-dot-edu"></div>
+              <div class="tl-content">
+                <div class="tl-meta">2020 — 2021</div>
+                <h3 class="tl-role">Higher Secondary (HSC) — 89%</h3>
+                <span class="tl-company">St. John's Matriculation Higher Secondary School, Madurai</span>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot tl-dot-edu"></div>
+              <div class="tl-content">
+                <div class="tl-meta">2018 — 2019</div>
+                <h3 class="tl-role">Secondary (SSLC) — 86.4%</h3>
+                <span class="tl-company">St. John's Matriculation Higher Secondary School, Madurai</span>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title" style="margin-top:3rem;">Achievements</h2>
+          <div class="achievement-list">
+            <div class="achievement-item">
+              <div class="achievement-icon gold"><i class="fa fa-trophy"></i></div>
+              <p>1st Prize — Project Presentation, SSM Institute of Technology</p>
+            </div>
+            <div class="achievement-item">
+              <div class="achievement-icon purple"><i class="fa fa-medal"></i></div>
+              <p>2nd Prize — Hackathon by Oasys Cybernetics &amp; Inext Labs (AI Recruitment Pipeline)</p>
+            </div>
+            <div class="achievement-item">
+              <div class="achievement-icon blue"><i class="fa fa-book-open"></i></div>
+              <p>Published 3 research papers in peer-reviewed journals on AI, computer vision, and IoT</p>
+            </div>
+            <div class="achievement-item">
+              <div class="achievement-icon green"><i class="fa fa-certificate"></i></div>
+              <p>Certifications: UX Design (Google), Advanced Data Analytics (Udemy), NPTEL Cloud Computing, IoT &amp; Python</p>
+            </div>
+          </div>
+
+          <h2 class="section-title" style="margin-top:3rem;">Publications</h2>
+          <div class="pub-list">
+            <div class="pub-item">
+              <div class="pub-dot"></div>
+              <div>
+                <p class="pub-title">Detectiverse – AI-Enhanced Screw Counting</p>
+                <p class="pub-journal">Journal of Image Processing &amp; Pattern Recognition Progress</p>
+              </div>
+            </div>
+            <div class="pub-item">
+              <div class="pub-dot pub-dot-purple"></div>
+              <div>
+                <p class="pub-title">Designing a Cancer Chatbot for a Website</p>
+                <p class="pub-journal">Journal of Multimedia Technology &amp; Recent Advancements</p>
+              </div>
+            </div>
+            <div class="pub-item">
+              <div class="pub-dot pub-dot-gold"></div>
+              <div>
+                <p class="pub-title">IoT-Based Smart Farming</p>
+                <p class="pub-journal">Intensive Research Organisation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label">Work</div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Applied AI solutions built for real-world environments — from factory floors to enterprise pipelines.</p>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="genai">Generative AI</button>
+        <button class="filter-btn" data-filter="ml">ML / DL</button>
+        <button class="filter-btn" data-filter="deployed">Deployed</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card featured" data-category="deployed ml">
+          <div class="project-header">
+            <div class="project-icon icon-purple"><i class="fa fa-robot"></i></div>
+            <span class="project-badge badge-green">Deployed</span>
+          </div>
+          <h3>Automatic Screw Detection System</h3>
+          <p class="project-client"><i class="fa fa-building"></i> Indo Metal Tech, Chennai</p>
+          <p>AI-based screw counting system using OpenCV and advanced image processing integrated with a camera setup for automated industrial counting. Accepted and deployed in production, improving manufacturing efficiency.</p>
+          <div class="project-tags">
+            <span>Computer Vision</span><span>OpenCV</span><span>Image Processing</span>
+          </div>
+        </div>
+
+        <div class="project-card featured" data-category="deployed">
+          <div class="project-header">
+            <div class="project-icon icon-blue"><i class="fa fa-newspaper"></i></div>
+            <span class="project-badge badge-green">Deployed</span>
+          </div>
+          <h3>Press Clipping Management System</h3>
+          <p class="project-client"><i class="fa fa-building"></i> Indian Railways, Madurai</p>
+          <p>Web-based platform to digitize and manage daily railway news clippings for PROs. Features categorization, annotation, archiving, and calendar-based retrieval of historical reports.</p>
+          <div class="project-tags">
+            <span>Web Dev</span><span>Python</span><span>Digital Archiving</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="genai deployed">
+          <div class="project-header">
+            <div class="project-icon icon-gold"><i class="fa fa-comments"></i></div>
+            <span class="project-badge badge-blue">Live</span>
+          </div>
+          <h3>RAG Chatbot</h3>
+          <p class="project-client"><i class="fa fa-building"></i> Greywiz Private Limited</p>
+          <p>End-to-end Retrieval-Augmented Generation chatbot answering queries from internal documents and external sources using LangChain, LangGraph, and PostgreSQL.</p>
+          <div class="project-tags">
+            <span>LangChain</span><span>LangGraph</span><span>RAG</span><span>LLMs</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="genai">
+          <div class="project-header">
+            <div class="project-icon icon-green"><i class="fa fa-users"></i></div>
+            <span class="project-badge badge-purple">Hackathon</span>
+          </div>
+          <h3>AI Recruitment Pipeline</h3>
+          <p class="project-client"><i class="fa fa-building"></i> Infosys Springboard</p>
+          <p>AI-powered recruitment system using Gemini for resume screening, ATS checks, and virtual interviews. Won 2nd prize at national hackathon.</p>
+          <div class="project-tags">
+            <span>Gemini</span><span>NLP</span><span>GenAI</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ml">
+          <div class="project-header">
+            <div class="project-icon icon-red"><i class="fa fa-lungs"></i></div>
+          </div>
+          <h3>Pneumonia Detection (CNN)</h3>
+          <p class="project-client"><i class="fa fa-tag"></i> Deep Learning · Healthcare AI</p>
+          <p>CNN model built with TensorFlow and Keras for pneumonia diagnosis from chest X-ray images, enabling early detection with high accuracy.</p>
+          <div class="project-tags">
+            <span>TensorFlow</span><span>CNN</span><span>Healthcare AI</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="genai">
+          <div class="project-header">
+            <div class="project-icon icon-cyan"><i class="fa fa-database"></i></div>
+          </div>
+          <h3>Text-to-SQL Query Converter</h3>
+          <p class="project-client"><i class="fa fa-tag"></i> Generative AI</p>
+          <p>AI system that converts natural language questions into SQL queries using Groq, making database querying accessible to non-technical users.</p>
+          <div class="project-tags">
+            <span>Groq</span><span>NLP</span><span>SQL</span><span>GenAI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-sub">Technologies I've built real projects with — not just listed on paper.</p>
+
+      <div class="skills-grid">
+        <div class="skill-group sg-genai">
+          <div class="sg-icon"><i class="fa fa-robot"></i></div>
+          <h4 class="skill-group-title">Generative AI &amp; LLMs</h4>
+          <div class="skill-tags">
+            <span>LangChain</span><span>LangGraph</span><span>RAG</span><span>Groq</span>
+            <span>Gemini</span><span>Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-group sg-prog">
+          <div class="sg-icon"><i class="fa fa-code"></i></div>
+          <h4 class="skill-group-title">Programming</h4>
+          <div class="skill-tags">
+            <span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-group sg-ml">
+          <div class="sg-icon"><i class="fa fa-brain"></i></div>
+          <h4 class="skill-group-title">ML &amp; Deep Learning</h4>
+          <div class="skill-tags">
+            <span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span>
+            <span>OpenCV</span><span>Hugging Face</span><span>CNN</span><span>Transformers</span>
+          </div>
+        </div>
+        <div class="skill-group sg-nlp">
+          <div class="sg-icon"><i class="fa fa-language"></i></div>
+          <h4 class="skill-group-title">NLP &amp; Data</h4>
+          <div class="skill-tags">
+            <span>NLTK</span><span>SpaCy</span><span>Pandas</span><span>NumPy</span>
+            <span>Matplotlib</span><span>Power BI</span>
+          </div>
+        </div>
+        <div class="skill-group sg-db">
+          <div class="sg-icon"><i class="fa fa-database"></i></div>
+          <h4 class="skill-group-title">Databases &amp; Tools</h4>
+          <div class="skill-tags">
+            <span>PostgreSQL</span><span>MySQL</span><span>Git</span><span>GitHub</span>
+          </div>
+        </div>
+        <div class="skill-group sg-design">
+          <div class="sg-icon"><i class="fa fa-palette"></i></div>
+          <h4 class="skill-group-title">Design &amp; Other</h4>
+          <div class="skill-tags">
+            <span>UX Design</span><span>Canva</span><span>Power BI</span><span>Excel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Open to opportunities in AI engineering, Python development, and Generative AI roles.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon-wrap ci-gold"><i class="fa fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:sobanaramakrishnan04@gmail.com">sobanaramakrishnan04@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-wrap ci-blue"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/sobana-r-s-66b726237/" target="_blank">linkedin.com/in/sobana-r-s</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-wrap ci-purple"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/sobanaramakrishnan" target="_blank">github.com/sobanaramakrishnan</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-wrap ci-green"><i class="fa fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+919944422501">+91 99444 22501</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" name="submitToGoogleSheet" method="post" action="https://script.google.com/macros/s/AKfycbzbDdO-G02uBnqrY95txrPBlVhdVKGFPx86xOigTyRHR4qZuUb-wGBxgi33UcfOWnTNRw/exec">
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" name="NAME" placeholder=" " required id="fieldName">
+              <label for="fieldName">Your Name</label>
+            </div>
+            <div class="form-field">
+              <input type="email" name="EMAIL" placeholder=" " required id="fieldEmail">
+              <label for="fieldEmail">Your Email</label>
+            </div>
+          </div>
+          <div class="form-field">
+            <input type="text" name="SUBJECT" placeholder=" " id="fieldSubject">
+            <label for="fieldSubject">Subject</label>
+          </div>
+          <div class="form-field">
+            <textarea name="MESSAGE" placeholder=" " rows="5" id="fieldMessage"></textarea>
+            <label for="fieldMessage">Your message...</label>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-paper-plane"></i> Send Message
+          </button>
+          <span id="msg"></span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="footer-logo">Sobana <span class="loader-dot"></a>
+      <p>Designed &amp; built by <span class="footer-name">Sobana R.S</span></p>
+      <div class="footer-social">
+        <a href="mailto:sobanaramakrishnan04@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        <a href="https://github.com/sobanaramakrishnan" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sobana-r-s-66b726237/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p class="footer-copy">© 2026 Sobana R.S — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
